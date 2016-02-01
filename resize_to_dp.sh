@@ -12,18 +12,18 @@ fi
 echo $1 | grep -E -q '^[0-9]+$' || die "Numeric argument required, $1 provided"
 echo $2 | grep -E -q '^[0-9]+$' || die "Numeric argument required at position 2, $2 provided"
 
-width = $1;
-height = $2;
+width=$1;
+height=$2;
 
-if [ $width -eq 0]; then
+if [ $width -eq 0 ]; then
 	die "width is 0"
 fi
 
-if [ $height -eq 0]; then
+if [ $height -eq 0 ]; then
 	die "height is 0"
 fi
 
-destDir = $3;
+destDir=$3;
 
 if [ ! -d "$destDir" ]; then
 	die "destination directory does not exist"
